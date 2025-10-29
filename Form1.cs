@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Topic_12_GUI_assignment_2
 {
-    public partial class Form1 : Form
+    public partial class FormQuiz : Form
     {
-        public Form1()
+        public FormQuiz()
         {
             InitializeComponent();
         }
@@ -20,6 +20,28 @@ namespace Topic_12_GUI_assignment_2
         private void grpQuestion_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormQuiz_Load(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Properties.Resources.Galaxy;
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            lblAnswer.Visible = true;
+            lblAnswerLine2.Visible = true;
+            btnNext.Visible = true;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            grpQuestion.Text = "Question 2";
         }
     }
 }

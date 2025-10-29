@@ -1,6 +1,6 @@
 ﻿namespace Topic_12_GUI_assignment_2
 {
-    partial class Form1
+    partial class FormQuiz
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.grpQuestion = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.radA = new System.Windows.Forms.RadioButton();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.radB = new System.Windows.Forms.RadioButton();
@@ -37,18 +37,21 @@
             this.radD = new System.Windows.Forms.RadioButton();
             this.lblAnswer = new System.Windows.Forms.Label();
             this.lblAnswerLine2 = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
             this.grpQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpQuestion
             // 
+            this.grpQuestion.BackColor = System.Drawing.Color.Transparent;
             this.grpQuestion.Controls.Add(this.radD);
             this.grpQuestion.Controls.Add(this.radC);
             this.grpQuestion.Controls.Add(this.radB);
             this.grpQuestion.Controls.Add(this.lblQuestion);
             this.grpQuestion.Controls.Add(this.radA);
             this.grpQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpQuestion.Location = new System.Drawing.Point(49, 39);
+            this.grpQuestion.ForeColor = System.Drawing.SystemColors.Control;
+            this.grpQuestion.Location = new System.Drawing.Point(42, 32);
             this.grpQuestion.Name = "grpQuestion";
             this.grpQuestion.Size = new System.Drawing.Size(400, 379);
             this.grpQuestion.TabIndex = 0;
@@ -56,15 +59,16 @@
             this.grpQuestion.Text = "Question 1";
             this.grpQuestion.Enter += new System.EventHandler(this.grpQuestion_Enter);
             // 
-            // button1
+            // btnSubmit
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(122, 436);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 41);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(115, 429);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(248, 41);
+            this.btnSubmit.TabIndex = 1;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // radA
             // 
@@ -125,34 +129,55 @@
             // 
             // lblAnswer
             // 
+            this.lblAnswer.BackColor = System.Drawing.Color.Transparent;
             this.lblAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnswer.Location = new System.Drawing.Point(471, 53);
+            this.lblAnswer.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblAnswer.Location = new System.Drawing.Point(464, 46);
             this.lblAnswer.Name = "lblAnswer";
             this.lblAnswer.Size = new System.Drawing.Size(224, 75);
             this.lblAnswer.TabIndex = 2;
             this.lblAnswer.Text = "The answer was:";
+            this.lblAnswer.Visible = false;
             // 
             // lblAnswerLine2
             // 
+            this.lblAnswerLine2.BackColor = System.Drawing.Color.Transparent;
             this.lblAnswerLine2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnswerLine2.Location = new System.Drawing.Point(476, 142);
+            this.lblAnswerLine2.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblAnswerLine2.Location = new System.Drawing.Point(469, 135);
             this.lblAnswerLine2.Name = "lblAnswerLine2";
             this.lblAnswerLine2.Size = new System.Drawing.Size(219, 97);
             this.lblAnswerLine2.TabIndex = 3;
-            this.lblAnswerLine2.Text = "label1";
+            this.lblAnswerLine2.Text = "Lol you suck";
+            this.lblAnswerLine2.Visible = false;
             // 
-            // Form1
+            // btnNext
+            // 
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(478, 247);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(201, 63);
+            this.btnNext.TabIndex = 4;
+            this.btnNext.Text = "Next question";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Visible = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // FormQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(746, 535);
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(733, 498);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblAnswerLine2);
             this.Controls.Add(this.lblAnswer);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.grpQuestion);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormQuiz";
+            this.Text = "Multiple Choice Questions";
+            this.Load += new System.EventHandler(this.FormQuiz_Load);
             this.grpQuestion.ResumeLayout(false);
             this.grpQuestion.PerformLayout();
             this.ResumeLayout(false);
@@ -162,7 +187,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpQuestion;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.RadioButton radA;
         private System.Windows.Forms.RadioButton radD;
@@ -170,6 +195,7 @@
         private System.Windows.Forms.RadioButton radB;
         private System.Windows.Forms.Label lblAnswer;
         private System.Windows.Forms.Label lblAnswerLine2;
+        private System.Windows.Forms.Button btnNext;
     }
 }
 
