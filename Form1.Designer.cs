@@ -134,7 +134,7 @@
             this.lblAnswer.ForeColor = System.Drawing.SystemColors.Control;
             this.lblAnswer.Location = new System.Drawing.Point(464, 46);
             this.lblAnswer.Name = "lblAnswer";
-            this.lblAnswer.Size = new System.Drawing.Size(224, 75);
+            this.lblAnswer.Size = new System.Drawing.Size(224, 32);
             this.lblAnswer.TabIndex = 2;
             this.lblAnswer.Text = "The answer was:";
             this.lblAnswer.Visible = false;
@@ -144,11 +144,11 @@
             this.lblAnswerLine2.BackColor = System.Drawing.Color.Transparent;
             this.lblAnswerLine2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnswerLine2.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblAnswerLine2.Location = new System.Drawing.Point(469, 135);
+            this.lblAnswerLine2.Location = new System.Drawing.Point(469, 78);
             this.lblAnswerLine2.Name = "lblAnswerLine2";
-            this.lblAnswerLine2.Size = new System.Drawing.Size(219, 97);
+            this.lblAnswerLine2.Size = new System.Drawing.Size(219, 154);
             this.lblAnswerLine2.TabIndex = 3;
-            this.lblAnswerLine2.Text = "Lol you suck";
+            this.lblAnswerLine2.Text = "[Answer]";
             this.lblAnswerLine2.Visible = false;
             // 
             // btnNext

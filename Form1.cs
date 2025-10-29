@@ -30,6 +30,7 @@ namespace Topic_12_GUI_assignment_2
         private void FormQuiz_Load(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.Galaxy;
+            lblQuestion.Text = "";
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -37,6 +38,8 @@ namespace Topic_12_GUI_assignment_2
             lblAnswer.Visible = true;
             lblAnswerLine2.Visible = true;
             btnNext.Visible = true;
+
+            lblAnswerLine2.Text = "[answer]";
         }
 
         private void btnNext_Click(object sender, EventArgs e)
